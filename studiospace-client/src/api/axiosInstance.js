@@ -5,7 +5,11 @@ const axiosInstance = axios.create({
   withCredentials: true, // Challenge 1: HTTPOnly cookie support
 });
 
-export default axiosInstance;
 
+const axiosSecure = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || "https://b-14-assignment-08.onrender.com",
+  withCredentials: true
+});
 
+export { axiosInstance, axiosSecure };
 
