@@ -20,6 +20,7 @@ app.use(cookieParser());
 app.use(cors({
   origin: [
     'http://localhost:5173',
+    'https://studiospace8.netlify.app',
   ],
   credentials: true
 }));
